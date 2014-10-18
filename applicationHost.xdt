@@ -13,7 +13,7 @@
          <environmentVariables>
             <add name="COMMAND" value="d:\home\SiteExtensions\ComposerExtension\Deployment\deploy.cmd" />
 	    <add name="COMPOSER" value="php d:\home\SiteExtensions\ComposerExtension\Composer\composer.phar" />
-	    <add name="COMPOSER_ARGS" value="--prefer-dist --no-dev --optimize-autoloader" />
+	    <add name="COMPOSER_ARGS" value="--prefer-dist --no-dev --optimize-autoloader --no-progress" />
          </environmentVariables>
     </runtime>
    </system.webServer> 
