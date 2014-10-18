@@ -12,4 +12,4 @@ IF EXIST Composer.bat (
   rm -f Composer.bat
 )
 
-echo @php composer.phar %*>Composer.bat
+echo @php "%~dp0composer.phar" %*>composer.bat
