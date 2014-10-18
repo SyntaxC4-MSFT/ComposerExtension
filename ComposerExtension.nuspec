@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package>
+<metadata>
+<id>composer</id>
+<title>Composer</title>
+<version>0.1.0</version>
+<authors>Cory Fowler</authors>
+<licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+<projectUrl>https://github.com/SyntaxC4-MSFT/ComposerExtension</projectUrl>
+<requireLicenseAcceptance>false</requireLicenseAcceptance>
+<description>An extension which brings Composer support to Azure Websites</description>
+<iconUrl>https://github.com/composer/getcomposer.org/blob/master/web/img/logo-composer-transparent.png</iconUrl>
+<tags>composer php packagemanager</tags>
+</metadata>
+</package>
