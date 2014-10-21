@@ -53,6 +53,10 @@ IF NOT DEFINED KUDU_SYNC_CMD (
 
 composer install %COMPOSER_ARGS%
 
+:: Move Files to Target
+
+robocopy %DEPLOYMENT_SOURCE%\vendor %DEPLOYMENT_TARGET%\vendor /MIR
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Deployment
 :: ----------
