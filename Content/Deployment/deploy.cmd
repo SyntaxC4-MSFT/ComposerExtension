@@ -53,9 +53,9 @@ IF NOT DEFINED KUDU_SYNC_CMD (
 
 composer install %COMPOSER_ARGS%
 
-:: Move Files to Target
+:: Update Manifest
 
-robocopy %DEPLOYMENT_SOURCE%\vendor %DEPLOYMENT_TARGET%\vendor /MIR
+echo vendor >> %ARTIFACTS%\manifest
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Deployment
