@@ -55,7 +55,7 @@ composer install %COMPOSER_ARGS%
 
 :: Update Manifest
 
-echo vendor >> %ARTIFACTS%\manifest
+find %DEPLOYMENT_SOURCE% | grep -v .git | sed 's/..//' >> %NEXT_MANIFEST_PATH%
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Deployment

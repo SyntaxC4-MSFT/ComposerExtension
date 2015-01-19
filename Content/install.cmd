@@ -1,6 +1,6 @@
 # Install Composer
 
-cd Composer
+cd Commands
 
 IF EXIST composer.phar (
   rm -f composer.phar
