@@ -51,11 +51,9 @@ IF NOT DEFINED KUDU_SYNC_CMD (
 :: Download Dependencies with Composer
 :: -----------------
 
-composer install %COMPOSER_ARGS%
+echo Install Dependencies with Composer
 
-:: Update Manifest
-
-find %DEPLOYMENT_SOURCE% | grep -v .git | sed 's/..//' >> %NEXT_MANIFEST_PATH%
+call composer install %COMPOSER_ARGS%
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Deployment
