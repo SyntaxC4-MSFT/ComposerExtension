@@ -14,6 +14,7 @@
             <add name="APPSETTING_COMMAND" value="d:\home\SiteExtensions\ComposerExtension\Hooks\deploy.cmd" />
 	    <add name="PATH" value="%PATH%;d:\home\SiteExtensions\ComposerExtension\Commands" />
 	    <add name="COMPOSER_ARGS" value="--prefer-dist --no-dev --optimize-autoloader --no-progress" />
+            <add name="COMPOSER_VENDOR_DIR" value="d:\home\site\vendor\" />
          </environmentVariables>
     </runtime>
    </system.webServer> 
