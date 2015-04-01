@@ -12,7 +12,7 @@ There are multiple ways to use Composer from Web App.
 
 ### Continuous Deployment
 
-This sample application demonstrates the usage of the `composer.json` file in Web App.
+This [sample application](https://github.com/SyntaxC4-MSFT/WAWS-Composer) demonstrates the usage of the `composer.json` file in Web App.
 
 * Place a `composer.json` file in the root of your repository
 * vendor folder will be created in `d:\home\site\vendor`
