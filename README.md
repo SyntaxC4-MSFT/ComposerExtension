@@ -23,6 +23,10 @@ This [sample application](https://github.com/SyntaxC4-MSFT/WAWS-Composer) demons
 * Open the Kudu Debug Console (http://&lt;site-name&gt;.scm.azurewebsites.net/DebugConsole) or Install [KuduExec](https://github.com/projectkudu/kuduexec)
 * run composer from the command line `composer selfupdate`
 
+### Timeout configuration
+
+In some cases (especially when attempting to install great amount of packages, [#1](https://github.com/SyntaxC4-MSFT/ComposerExtension/issues/1)) the deployment may timeout and the dependencies won't get loaded correctly by Composer. A simple fix is to add a [deployment configuration](https://github.com/projectkudu/kudu/wiki/Customizing-deployments) (create `.deployment` file) with parameter [**SCM_COMMAND_IDLE_TIMEOUT**](https://github.com/projectkudu/kudu/wiki/Configurable-settings) and set it to bigger number (for example `SCM_COMMAND_IDLE_TIMEOUT=600` where 600 is time out in seconds). The default value in Azure Web Apps for this setting appears to be 400 seconds.
+
 ## AppSettings
 
 | Name                | Value                                 |Notes                                     |
