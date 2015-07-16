@@ -1,3 +1,7 @@
+![](https://img.shields.io/badge/platform-Azure-00abec.svg?style=flat-square)
+![](https://img.shields.io/badge/PHP-5.4%2C%205.5%2C%205.6-4F5B93.svg?style=flat-square)
+![](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
+
 # Azure App Service Web App Composer Site Extension
 
 This site extension adds [Composer](http://getcomposer.org) support to Web App to enable dependency management for PHP applications.
@@ -31,7 +35,7 @@ In some cases (especially when attempting to install great amount of packages, [
 
 | Name                | Value                                 |Notes                                     |
 |---------------------|---------------------------------------|------------------------------------------|
-| APPSETTING_COMMAND  | %XDT_EXTENSIONPATH%\Hooks\deploy.cmd  | Deployment Hook Command. (causes .deployment file not to function [[bug](https://github.com/projectkudu/kudu/issues/1519)])                |
-| PATH                | %PATH%;%XDT_EXTENSIONPATH%\Commands   | Overwrites the Path. Last Extension Wins |
+| APPSETTING_COMMAND  | %XDT_EXTENSIONPATH%\Hooks\deploy.cmd  | Deployment Hook Command.                 |
+| PATH                | %PATH%;%XDT_EXTENSIONPATH%\Commands;%APPDATA%\Composer\vendor\bin   | Overwrites the Path. Last Extension Wins |
 | COMPOSER_ARGS       | --prefer-dist --no-dev --optimize-autoloader --no-progress  |  Command line arguments for composer during deploy.cmd execution |
-| COMPOSER_VENDOR_DIR | d:\home\site\vendor\                  | Moves the vendor folder out of wwwroot for security purposes.
+
