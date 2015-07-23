@@ -3,13 +3,13 @@
 <metadata>
 <id>ComposerExtension</id>
 <title>Composer</title>
-<version>0.2.7</version>
+<version>0.3.0</version>
 <authors>Cory Fowler</authors>
 <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
 <projectUrl>https://github.com/SyntaxC4-MSFT/ComposerExtension</projectUrl>
 <requireLicenseAcceptance>false</requireLicenseAcceptance>
-<description>An extension which brings Composer support to Azure Websites</description>
-<iconUrl>https://github.com/composer/getcomposer.org/blob/master/web/img/logo-composer-transparent.png</iconUrl>
+<description>An extension which brings Composer support to Azure Web App</description>
+<iconUrl>https://github.com/composer/getcomposer.org/blob/master/web/img/logo-composer-transparent3.png</iconUrl>
 <tags>composer php packagemanager</tags>
 </metadata>
 <files>

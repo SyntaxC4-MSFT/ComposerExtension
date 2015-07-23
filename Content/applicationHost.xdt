@@ -9,12 +9,25 @@
         </sites>
   </system.applicationHost>
   <system.webServer> 
-    <runtime xdt:Transform="Insert" >
+    <runtime xdt:Transform="Insert">
          <environmentVariables>
             <add name="APPSETTING_COMMAND" value="d:\home\SiteExtensions\ComposerExtension\Hooks\deploy.cmd" />
 	    <add name="COMPOSER_ARGS" value="--prefer-dist --no-dev --optimize-autoloader --no-progress" />
             <add name="PATH" value="%PATH%;d:\home\SiteExtensions\ComposerExtension\Commands;%APPDATA%\Composer\vendor\bin" />
          </environmentVariables>
     </runtime>
-   </system.webServer> 
+    <rewrite xdt:Transform="InsertIfMissing">
+      <rules xdt:Transform="InsertIfMissing">
+        <rule name="RequestBlockingRule1" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" stopProcessing="true">
+                    <match url=".*" />
+                    <conditions>
+                        <add input="{URL}" pattern="vendor/(.*)$" />
+                    </conditions>
+                    <action type="CustomResponse" statusCode="403" statusReason="Forbidden: Access is denied." statusDescription="You do not have permission to view this directory or page using the credentials that you supplied." />
+                </rule>
+      </rules>
+    </rewrite>
+   </system.webServer>
 </configuration>
+
+        
