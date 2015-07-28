@@ -19,8 +19,8 @@ There are multiple ways to use Composer from Web App.
 This [sample application](https://github.com/SyntaxC4-MSFT/WAWS-Composer) demonstrates the usage of the `composer.json` file in Web App.
 
 * Place a `composer.json` file in the root of your repository
-* vendor folder will be created in `d:\home\site\vendor`
-* reference to the autoload.php file `require_once "../vendor/autoload.php";`
+* vendor folder will be created in `d:\home\site\wwwroot\vendor` (there is a rewrite rule enabled in the extension to protect against public access to the `vendor` folder)
+* reference to the autoload.php file `require_once "vendor/autoload.php";`
 
 ### Command-Line
 
