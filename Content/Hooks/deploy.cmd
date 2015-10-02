@@ -55,6 +55,8 @@ echo Install Dependencies with Composer
 
 call composer install %COMPOSER_ARGS%
 
+IF !ERRORLEVEL! NEQ 0 goto error
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: Deployment
 :: ----------
