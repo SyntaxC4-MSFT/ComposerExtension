@@ -1,1 +1,1 @@
-@php "d:\home\SiteExtensions\ComposerExtension\Commands\composer.phar" %*
+@php "%~dp0\composer.phar" %*
