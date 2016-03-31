@@ -9,10 +9,10 @@
         </sites>
   </system.applicationHost>
   <system.webServer> 
-    <runtime xdt:Transform="Insert">
+    <runtime xdt:Transform="InsertIfMissing">
          <environmentVariables>
             <add name="APPSETTING_COMMAND" value="%HOME%\SiteExtensions\ComposerExtension\Hooks\deploy.cmd" />
-	    <add name="COMPOSER_ARGS" value="--prefer-dist --no-dev --optimize-autoloader --no-progress" />
+	    <add name="COMPOSER_ARGS" value="--prefer-dist --no-dev --optimize-autoloader" />
             <add name="PATH" value="%PATH%;%HOME%\SiteExtensions\ComposerExtension\Commands;%APPDATA%\Composer\vendor\bin" />
          </environmentVariables>
     </runtime>
