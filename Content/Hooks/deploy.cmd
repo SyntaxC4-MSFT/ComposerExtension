@@ -53,7 +53,11 @@ IF NOT DEFINED KUDU_SYNC_CMD (
 
 echo Install Dependencies with Composer
 
-call composer install %COMPOSER_ARGS%
+if exist %DEPLOYMENT_SOURCE%\composer.json (
+  call composer install %COMPOSER_ARGS%
+) else (
+  echo No composer.json found in %DEPLOYMENT_SOURCE%.  Skipping composer.
+)
 
 IF !ERRORLEVEL! NEQ 0 goto error
 
