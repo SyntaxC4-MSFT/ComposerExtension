@@ -53,7 +53,11 @@ IF NOT DEFINED KUDU_SYNC_CMD (
 
 echo Install Dependencies with Composer
 
-call composer install %COMPOSER_ARGS%
+if exist %DEPLOYMENT_SOURCE%\composer.json (
+  call composer install %COMPOSER_ARGS%
+) else (
+  echo No composer.json found in %DEPLOYMENT_SOURCE%.  Skipping composer.
+)
 
 IF !ERRORLEVEL! NEQ 0 goto error
 
@@ -64,8 +68,10 @@ IF !ERRORLEVEL! NEQ 0 goto error
 echo Handling Basic Web Site deployment.
 
 :: 1. KuduSync
-call %KUDU_SYNC_CMD% -v 50 -f "%DEPLOYMENT_SOURCE%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
-IF !ERRORLEVEL! NEQ 0 goto error
+IF /I "%IN_PLACE_DEPLOYMENT%" NEQ "1" (
+  call %KUDU_SYNC_CMD% -v 50 -f "%DEPLOYMENT_SOURCE%" -t "%DEPLOYMENT_TARGET%" -n "%NEXT_MANIFEST_PATH%" -p "%PREVIOUS_MANIFEST_PATH%" -i ".git;.hg;.deployment;deploy.cmd"
+  IF !ERRORLEVEL! NEQ 0 goto error
+)
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
