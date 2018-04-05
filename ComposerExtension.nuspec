@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 <package>
-<metadata>
-<id>ComposerExtension</id>
-<title>Composer</title>
-<version>0.3.3</version>
-<authors>Cory Fowler</authors>
-<licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
-<projectUrl>https://github.com/SyntaxC4-MSFT/ComposerExtension</projectUrl>
-<requireLicenseAcceptance>false</requireLicenseAcceptance>
-<description>An extension which brings Composer support to Azure Web App</description>
-<iconUrl>http://www.siteextensions.net/Content/Images/packageDefaultIcon.png</iconUrl>
-<tags>composer php packagemanager</tags>
-</metadata>
-<files>
-  <file src="Content\**\*.*" target="Content" />
-</files>
+  <metadata>
+    <id>ComposerExtension</id>
+    <title>Composer</title>
+    <version>0.3.4</version>
+    <authors>Cory Fowler</authors>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/SyntaxC4-MSFT/ComposerExtension</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>An extension which brings Composer support to Azure Web App</description>
+    <iconUrl>http://www.siteextensions.net/Content/Images/packageDefaultIcon.png</iconUrl>
+    <tags>AzureSiteExtension composer php packagemanager</tags>
+    <packageTypes>
+      <packageType name="AzureSiteExtension" />
+    </packageTypes>
+  </metadata>
+  <files>
+    <file src="Content\**\*.*" target="Content" />
+  </files>
 </package>
